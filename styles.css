@@ -1,0 +1,252 @@
+/* Overall page background and text color */
+body {
+    background-color: #f4f1ea; /* soft earthy background */
+    color: #000000; /* dark brown text */
+    font-family: Georgia, serif; /* natural, classic font */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  img{
+    text-align: center;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #489a5b; /* forest green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Navigation links */
+  nav a {
+    color: #d9985f; /* clay orange */
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: white;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #2e4a35;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Div styles for positioning blocks of content */
+  .div1 {
+    background-color: #c5dcad; /* light moss */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  .div2 {
+    background-color: #e5d1b8; /* warm beige */
+    padding: 20px;
+    margin: 20px;
+    border-left: 5px solid #b56b45; /* accent line */
+  }
+  
+  .div3 {
+    background-color: #000000; /* soft cream */
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* soft drop shadow */
+  }
+  
+  /* Example font color overrides */
+  h1, h2 {
+    color: #163f18;
+  }
+  
+  p {
+    color: #3e3c36;
+  }
+  
+  
+  html {
+    scroll-behavior: smooth;
+  }
+    
+    
+div{
+
+    text-align: center;
+}
+
+.centered-list {
+    list-style-position: inside;
+    text-align: center;
+    display: inline-block;
+  }
+  .about-text {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px; /* optional for spacing on small screens */
+  }
+  .footer-text a {
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  .contact-info {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    padding: 5px 0;
+    font-size: 1.1em;
+  }
+/* Make the page fill the screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Let main content expand */
+  main {
+    flex: 1;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #2e4a35;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Keep footer text white */
+  .footer-text {
+    color: white;
+  }
+  
+  /* Make footer link white too */
+  .footer-text a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  .footer-wrapper {
+    background-color: #68a060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0; /* More natural vertical spacing */
+  }
+
+  footer {
+    background-color: #2e4a35; /* Dark green inner footer */
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  
+  .footer-text {
+    color: white;
+    margin: 0;
+  }
+  
+  .footer-text a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  .centered-heading {
+    text-align: center;
+  }
+  .contact-background {
+    background-image: url('contactpagebackground.JPG'); /* replace with actual filename */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+  }
+  
+  /* Optional: Make text readable over background */
+  .contact-info {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .centered-heading {
+    text-align: center;
+    margin-top: 40px;
+    color: #2e4a35; /* forest green or whatever theme you're using */
+  }
+  
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .photo-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* This controls spacing BETWEEN images */
+    padding: 0; /* This avoids gaps around the gallery */
+    margin: 0;  /* Just in case there's default spacing */
+  }
+  .photo-gallery img {
+    display: block;
+    /* existing styles */
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  .tableauPlaceholder iframe {
+    max-width: 100%;
+    border: none;
+  }
+        
+    
+    
+  

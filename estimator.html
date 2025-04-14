@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Price Estimator - Taymo Films</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f1ea;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #2e4a35;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .estimator {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #result {
+      margin-top: 25px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #2e4a35;
+      text-align: center;
+    }
+
+    .cta {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      background-color: #2e4a35;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #3b6a4a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Video & Photo Price Estimator</h1>
+
+  <div class="estimator">
+    <label for="service">Type of Service</label>
+    <select id="service">
+      <option value="video">Wedding Video</option>
+      <option value="photos">Engagement Photos</option>
+      <option value="couples">Couples Shoot</option>
+    </select>
+
+    <label for="location">Location</label>
+    <select id="location">
+      <option value="local">Local (0–30 miles)</option>
+      <option value="insta">In-State (30–100 miles)</option>
+      <option value="outstate">Out-of-State</option>
+    </select>
+
+    <label for="duration">Duration</label>
+    <select id="duration">
+      <option value="1">1 Hour</option>
+      <option value="4">Half Day (4 hrs)</option>
+      <option value="8">Full Day (8+ hrs)</option>
+    </select>
+
+    <div id="result">Estimated Price: $0</div>
+
+    <div class="cta">
+      <a href="contact.html">Let's Work Together</a>
+    </div>
+  </div>
+
+  <script>
+    const servicePrices = {
+      video: 500,
+      photos: 300,
+      couples: 250
+    };
+
+    const locationFees = {
+      local: 0,
+      insta: 75,
+      outstate: 200
+    };
+
+    const durationMultipliers = {
+      1: 1,
+      4: 1.5,
+      8: 2
+    };
+
+    const serviceSelect = document.getElementById('service');
+    const locationSelect = document.getElementById('location');
+    const durationSelect = document.getElementById('duration');
+    const result = document.getElementById('result');
+
+    function calculatePrice() {
+      const service = serviceSelect.value;
+      const location = locationSelect.value;
+      const duration = durationSelect.value;
+
+      const base = servicePrices[service];
+      const fee = locationFees[location];
+      const multiplier = durationMultipliers[duration];
+
+      const total = Math.round((base + fee) * multiplier);
+
+      result.textContent = `Estimated Price: $${total}`;
+    }
+
+    serviceSelect.addEventListener('change', calculatePrice);
+    locationSelect.addEventListener('change', calculatePrice);
+    durationSelect.addEventListener('change', calculatePrice);
+
+    // Run on page load
+    calculatePrice();
+  </script>
+
+</body>
+</html>
