@@ -246,7 +246,14 @@ html, body {
     max-width: 100%;
     border: none;
   }
-        
-    
-    
+  .centered-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   
+  .centered-list {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+    
